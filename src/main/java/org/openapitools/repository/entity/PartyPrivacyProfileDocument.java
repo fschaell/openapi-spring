@@ -1,25 +1,19 @@
-package org.openapitools.model;
+package org.openapitools.repository.entity;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.net.URI;
-import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import org.openapitools.model.PartyPrivacyAgreementRef;
-import org.openapitools.model.PartyPrivacyProfileCharacteristic;
-import org.openapitools.model.PartyPrivacyProfileSpecificationRef;
-import org.openapitools.model.RelatedParty;
-import org.openapitools.model.TimePeriod;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.openapitools.model.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+import java.net.URI;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * A Party Privacy Profile represents the set of Privacy settings defined for a Party
@@ -27,7 +21,7 @@ import javax.validation.constraints.*;
 @ApiModel(description = "A Party Privacy Profile represents the set of Privacy settings defined for a Party")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-02-20T12:51:03.308+01:00[Europe/Berlin]")
 @Document
-public class PartyPrivacyProfile   {
+public class PartyPrivacyProfileDocument {
   @JsonProperty("id")
   private String id;
 
@@ -74,7 +68,7 @@ public class PartyPrivacyProfile   {
   @JsonProperty("@type")
   private String atType;
 
-  public PartyPrivacyProfile id(String id) {
+  public PartyPrivacyProfileDocument id(String id) {
     this.id = id;
     return this;
   }
@@ -94,7 +88,7 @@ public class PartyPrivacyProfile   {
     this.id = id;
   }
 
-  public PartyPrivacyProfile href(String href) {
+  public PartyPrivacyProfileDocument href(String href) {
     this.href = href;
     return this;
   }
@@ -114,7 +108,7 @@ public class PartyPrivacyProfile   {
     this.href = href;
   }
 
-  public PartyPrivacyProfile creationDate(OffsetDateTime creationDate) {
+  public PartyPrivacyProfileDocument creationDate(OffsetDateTime creationDate) {
     this.creationDate = creationDate;
     return this;
   }
@@ -135,7 +129,7 @@ public class PartyPrivacyProfile   {
     this.creationDate = creationDate;
   }
 
-  public PartyPrivacyProfile description(String description) {
+  public PartyPrivacyProfileDocument description(String description) {
     this.description = description;
     return this;
   }
@@ -155,7 +149,7 @@ public class PartyPrivacyProfile   {
     this.description = description;
   }
 
-  public PartyPrivacyProfile name(String name) {
+  public PartyPrivacyProfileDocument name(String name) {
     this.name = name;
     return this;
   }
@@ -175,7 +169,7 @@ public class PartyPrivacyProfile   {
     this.name = name;
   }
 
-  public PartyPrivacyProfile status(String status) {
+  public PartyPrivacyProfileDocument status(String status) {
     this.status = status;
     return this;
   }
@@ -195,7 +189,7 @@ public class PartyPrivacyProfile   {
     this.status = status;
   }
 
-  public PartyPrivacyProfile agreedByParty(RelatedParty agreedByParty) {
+  public PartyPrivacyProfileDocument agreedByParty(RelatedParty agreedByParty) {
     this.agreedByParty = agreedByParty;
     return this;
   }
@@ -217,7 +211,7 @@ public class PartyPrivacyProfile   {
     this.agreedByParty = agreedByParty;
   }
 
-  public PartyPrivacyProfile agreement(PartyPrivacyAgreementRef agreement) {
+  public PartyPrivacyProfileDocument agreement(PartyPrivacyAgreementRef agreement) {
     this.agreement = agreement;
     return this;
   }
@@ -238,7 +232,7 @@ public class PartyPrivacyProfile   {
     this.agreement = agreement;
   }
 
-  public PartyPrivacyProfile applicableForParty(RelatedParty applicableForParty) {
+  public PartyPrivacyProfileDocument applicableForParty(RelatedParty applicableForParty) {
     this.applicableForParty = applicableForParty;
     return this;
   }
@@ -259,12 +253,12 @@ public class PartyPrivacyProfile   {
     this.applicableForParty = applicableForParty;
   }
 
-  public PartyPrivacyProfile partyPrivacyProfileCharacteristic(List<PartyPrivacyProfileCharacteristic> partyPrivacyProfileCharacteristic) {
+  public PartyPrivacyProfileDocument partyPrivacyProfileCharacteristic(List<PartyPrivacyProfileCharacteristic> partyPrivacyProfileCharacteristic) {
     this.partyPrivacyProfileCharacteristic = partyPrivacyProfileCharacteristic;
     return this;
   }
 
-  public PartyPrivacyProfile addPartyPrivacyProfileCharacteristicItem(PartyPrivacyProfileCharacteristic partyPrivacyProfileCharacteristicItem) {
+  public PartyPrivacyProfileDocument addPartyPrivacyProfileCharacteristicItem(PartyPrivacyProfileCharacteristic partyPrivacyProfileCharacteristicItem) {
     if (this.partyPrivacyProfileCharacteristic == null) {
       this.partyPrivacyProfileCharacteristic = new ArrayList<>();
     }
@@ -288,7 +282,7 @@ public class PartyPrivacyProfile   {
     this.partyPrivacyProfileCharacteristic = partyPrivacyProfileCharacteristic;
   }
 
-  public PartyPrivacyProfile partyPrivacyProfileSpecification(PartyPrivacyProfileSpecificationRef partyPrivacyProfileSpecification) {
+  public PartyPrivacyProfileDocument partyPrivacyProfileSpecification(PartyPrivacyProfileSpecificationRef partyPrivacyProfileSpecification) {
     this.partyPrivacyProfileSpecification = partyPrivacyProfileSpecification;
     return this;
   }
@@ -309,7 +303,7 @@ public class PartyPrivacyProfile   {
     this.partyPrivacyProfileSpecification = partyPrivacyProfileSpecification;
   }
 
-  public PartyPrivacyProfile validFor(TimePeriod validFor) {
+  public PartyPrivacyProfileDocument validFor(TimePeriod validFor) {
     this.validFor = validFor;
     return this;
   }
@@ -330,7 +324,7 @@ public class PartyPrivacyProfile   {
     this.validFor = validFor;
   }
 
-  public PartyPrivacyProfile atBaseType(String atBaseType) {
+  public PartyPrivacyProfileDocument atBaseType(String atBaseType) {
     this.atBaseType = atBaseType;
     return this;
   }
@@ -350,7 +344,7 @@ public class PartyPrivacyProfile   {
     this.atBaseType = atBaseType;
   }
 
-  public PartyPrivacyProfile atSchemaLocation(URI atSchemaLocation) {
+  public PartyPrivacyProfileDocument atSchemaLocation(URI atSchemaLocation) {
     this.atSchemaLocation = atSchemaLocation;
     return this;
   }
@@ -371,7 +365,7 @@ public class PartyPrivacyProfile   {
     this.atSchemaLocation = atSchemaLocation;
   }
 
-  public PartyPrivacyProfile atType(String atType) {
+  public PartyPrivacyProfileDocument atType(String atType) {
     this.atType = atType;
     return this;
   }
@@ -393,14 +387,14 @@ public class PartyPrivacyProfile   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PartyPrivacyProfile partyPrivacyProfile = (PartyPrivacyProfile) o;
+    PartyPrivacyProfileDocument partyPrivacyProfile = (PartyPrivacyProfileDocument) o;
     return Objects.equals(this.id, partyPrivacyProfile.id) &&
         Objects.equals(this.href, partyPrivacyProfile.href) &&
         Objects.equals(this.creationDate, partyPrivacyProfile.creationDate) &&
@@ -427,7 +421,7 @@ public class PartyPrivacyProfile   {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PartyPrivacyProfile {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
     sb.append("    creationDate: ").append(toIndentedString(creationDate)).append("\n");
@@ -451,7 +445,7 @@ public class PartyPrivacyProfile   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
